@@ -1,0 +1,23 @@
+{
+  "name": "mcoding-sutra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1"
+  },
+  "scripts": {
+    "dev": "browser-sync start --server --files '.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/otakumesi/mcoding-sutra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otakumesi/mcoding-sutra/issues"
+  },
+  "homepage": "https://github.com/otakumesi/mcoding-sutra#readme"
+}
