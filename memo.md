@@ -47,8 +47,9 @@ root-emの略で、ルート要素（html要素）を1としたときの倍率
 - 各種ブラウザでは基本的なフォンtのサイズは16pxとなっている。
 - そのため、html要素で初期化する場合は62.5%と書くと良い。
 
+### `font-size: 0`にしてinline要素の改行を消すテクなどは多様される
 
-### 要素のボックスモデル
+## 要素のボックスモデル
 コンテンツは4つの領域を持っている
 - margin
   - border
@@ -211,3 +212,11 @@ CSSでカウントできる
   - カウンタのインクリメント
 - content: count(${counter})
   - カウンタの表示
+
+# 子孫セレクタ、子セレクタ、隣接セレクタ
+* .ancestor .descendant
+  * `ancestor`より下のすべての`.descendant`に適用する
+* .parent > .child
+  * `.parent`のすぐ下の子要素の`.child`にのみ適用する
+* .parent > .me + .neighbor
+  * `.parent`の下の.meに隣接している`.neighbor`にのみ適用する
