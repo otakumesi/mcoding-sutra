@@ -306,3 +306,14 @@ ex.
 最新のブラウザをターゲットにしつつも、レガシーブラウザでもレベルを落として表示する
 ## プログレッシブエンハンスメント
 レガシーブラウザをターゲットにしつつも、モダンブラウザではリッチな見せ方をする
+
+# flexbox
+gloatやtableなどの上位互換
+簡単にレイアウトが作れる
+
+レガシーブラウザなどでは対応していなかったりする
+- shimや自動的にベンダープレフィックスを付与してくれたりするビルドツールを使うなら利用もあり
+
+* https://www.webcreatorbox.com/tech/flexbox
+* https://www.webcreatorbox.com/tech/flexbox-tips
+* https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet
