@@ -317,3 +317,54 @@ gloatやtableなどの上位互換
 * https://www.webcreatorbox.com/tech/flexbox
 * https://www.webcreatorbox.com/tech/flexbox-tips
 * https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet
+
+# background-size
+* cover
+全体を覆うことができる
+* http://www.htmq.com/css3/background-size.shtml
+
+# ::before, ::afterの小技
+**::before, ::afterをinline-block属性にして並べることで、heightとwidthを設定した要素を元のコンテンツの左右に並べることができる
+例: --- (content) --- みたいなデザインを作れる
+
+# セレクタの詳細度
+どのセレクタが「強い」かを意味する
+CSSが競合した時に優先されるもの
+同じ詳細度の場合は書かれたものが後のものが優先される
+
+## 詳細度の強さ
+style属性 > id > class > 擬似クラス > 属性 > 要素型、疑似要素
+
+# 変更に強いCSSのために
+意味合い的な命名をすることを心がけるとよい
+→直接的な見た目に関わる命名は避けた方が良い
+
+# シングルクラス設計とマルチクラス設計
+## シングルクラス
+1つの要素に対して1つのクラスをつけてスタイルをすべて表現する
+
+## マルチクラス
+1つの要素に対して複数のクラスをつけて、一つのクラスに重複をまとめる
+詳細度による上書きを利用して複数のクラスを表現する
+CSSを簡潔にできる分、HTMLが肥大化しがち
+
+### CSSプリプロセッサを使う
+マルチクラスをextendなどを利用して作ることができるため、マルチクラスの問題を解決できる
+
+# header要素はブロック要素
+::beforeや::afterなどを利用する時にinlineやinline-blockにしたくなるかも
+
+# display: table
+table, table-cellによって従来のテーブルのようなレイアウトをCSSだけで実現できる
+`border-collapse: separate;`と`border-spacing`を組み合わせると子要素のtable-cellの間隔を調整できる
+
+# position
+- static
+- relative
+- absolute
+- fixedA
+
+* absoluteやfixedが指定された場合は自動的にblock属性になる
+
+# marginやpaddingによって高さを確保する
+marginやpaddingの%指定は親コンテンツの横幅を元に算出するため、横幅から縦幅を計算したい時に利用できる
