@@ -399,9 +399,11 @@ marginやpaddingの%指定は親コンテンツの横幅を元に算出するた
 そのため、`target::after`というふうに書いたclassを複数持たせて修飾できる
 * 疑似要素のポリモーフィズム的なのを実現できる
 
-## .zindex
+## z-index
 要素の重ね純を指定する
 大きい数値順になる
+
+positionがstaticの場合はz-indexが効かないらしい
 
 ## ベクターファイルの利点
 どれだけ拡大をしてもキレイに表示できる
@@ -436,3 +438,16 @@ rgba(red, green, blue, transparecy)
 ### rgba指定
 色のみを透過させる
 →つまり、rgbaを使ったbackground-colorだけ、colorだけが透過される
+
+## viewport
+スマホページではスマホの横幅に合わせてコンテンツの縮小が行われる
+`viewport`を指定することで画面の縮小幅を指定することができる
+- width="device-width"によって、横幅をデバイスサイズにすることができる
+- initial-scaleでは初期表示時のズーム倍率を指定できる
+
+## メディアクエリ
+* linkタグから専用CSSを読み込む
+* CSSのimport文で専用CSSを読み込む
+* 直接メディアクエリの構文を書いて分岐させる
+
+メディアクエリのdevice-widthやwidthなどの判定式に指定できる条件をメディア特性という
